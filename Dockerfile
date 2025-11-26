@@ -32,7 +32,7 @@ RUN ./gradlew bootJar --no-daemon
 # ========================================
 # Imagen base con SOLO el runtime de Java (sin herramientas de compilación)
 # Esto reduce el tamaño de la imagen final de ~500MB a ~200MB
-FROM openjdk:17-alpine
+FROM eclipse-temurin:17-jre-alpine
 
 # Documentar que la aplicación escucha en el puerto 8080
 # IMPORTANTE: esto NO abre el puerto, solo es documentación
@@ -43,7 +43,7 @@ EXPOSE 8080
 # --from=build: tomar archivo de la etapa "build" anterior
 # Solo se copia el JAR, NO el código fuente ni herramientas de compilación
 # Esto mantiene la imagen final pequeña y segura
-COPY --from=build ./build/libs/Mutantes-1.0-SNAPSHOT.jar ./app.jar
+COPY --from=build ./build/libs/*.jar ./app.jar
 
 # Comando que se ejecuta cuando el contenedor inicia
 # ENTRYPOINT (no CMD) asegura que siempre se ejecute la aplicación
