@@ -17,8 +17,8 @@ El sistema verifica secuencias de ADN en una matriz de (NxN). [cite_start]Se con
 
 [cite_start]La API se encuentra desplegada y disponible para pruebas en **Render** (Nivel 2 del examen)[cite: 22, 48].
 
-**Base URL:** `[TU_URL_DE_RENDER]`
-**Swagger UI (Documentación Interactiva):** `[TU_URL_DE_RENDER]/swagger-ui.html`
+**Base URL:** `https://integradormutantesfrancomolinier.onrender.com`
+**Swagger UI (Documentación Interactiva):** `https://integradormutantesfrancomolinier.onrender.com/swagger-ui.html`
 
 > **Nota:** Al estar alojado en el plan gratuito de Render, la primera petición puede tardar unos 50 segundos en "despertar" el servicio.
 
@@ -185,5 +185,6 @@ El reporte detallado se generará en: `build/reports/jacoco/test/html/index.html
 
 ¡Con esto tu proyecto está **100% terminado** y documentado profesionalmente! 🚀
 ```
+
 
 
